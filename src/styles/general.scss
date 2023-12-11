@@ -1,0 +1,9 @@
+@use "./partials/_variables.scss" as *;
+
+@import "bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
