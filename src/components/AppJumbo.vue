@@ -5,9 +5,8 @@ import { store } from "../store.js";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/modules';
 import 'swiper/css/bundle';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-// init Swiper:
-const swiper = new Swiper();
 
 export default {
     name: "AppJumbo",
@@ -18,20 +17,8 @@ export default {
 
     data() {
         return {
-            store
-        }
-    },
-
-    setup() {
-        const onSwiper = (swiper) => {
-            console.log(swiper);
-        };
-        const onSlideChange = () => {
-            console.log('slide change');
-        };
-        return {
-            onSwiper,
-            onSlideChange,
+            store,
+            modules: [Autoplay, Pagination, Navigation],
         };
     },
 
@@ -43,11 +30,50 @@ export default {
 
 
 <template>
-    <swiper :slides-per-view="3" :space-between="50" @swiper="onSwiper" @slideChange="onSlideChange">
-        <swiper-slide></swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
+    <swiper :spaceBetween="30" :effect="'fade'" :centeredSlides="true"
+        :autoplay="{ delay: 8000, disableOnInteraction: false }" :pagination="{ clickable: true }" :navigation="true"
+        :modules="modules" class="mySwiper">
+        <swiper-slide><img src="../assets/img/slider-autocar-5.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/slider-autocar-6.jpg" alt=""></swiper-slide>
     </swiper>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
