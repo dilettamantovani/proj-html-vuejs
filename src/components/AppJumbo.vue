@@ -5,7 +5,7 @@ import { store } from "../store.js";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/modules';
 import 'swiper/css/bundle';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 
 
 export default {
@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             store,
-            modules: [Autoplay, Pagination, Navigation],
+            modules: [Autoplay, EffectFade, Pagination, Navigation],
         };
     },
 
@@ -30,7 +30,7 @@ export default {
 
 
 <template>
-    <swiper :spaceBetween="30" :effect="'fade'" :centeredSlides="true"
+    <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :effect="'fade'" :centeredSlides="true"
         :autoplay="{ delay: 8000, disableOnInteraction: false }" :pagination="{ clickable: true }" :navigation="true"
         :modules="modules" class="mySwiper">
         <swiper-slide><img src="../assets/img/slider-autocar-5.jpg" alt=""></swiper-slide>
