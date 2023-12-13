@@ -3,9 +3,25 @@ import { store } from "../store.js";
 
 export default {
     name: "AppFooter",
+    props: {
+        footerLinks: Array,
+    },
+
     data() {
         return {
-            store
+            store,
+            footerLinks: [
+                {
+                    title: "My Account",
+                    link: ["My Account", "Checkout", "Cart", "Package", "Add Car"]
+                },
+
+                {
+                    title: "Quick Links",
+                    link: ["Home", "About Us", "Blog", "Contact", "Refund & Returns"]
+                },
+            ]
+
         }
     },
 
@@ -17,7 +33,10 @@ export default {
 
 
 <template>
-    <p>Banana</p>
+    <div v-for="link in footerLinks">
+        <div>{{ link.title }}</div>
+        <div v-for="element in link.link">{{ element }}</div>
+    </div>
 </template>
 
 <style scoped lang="scss"></style>

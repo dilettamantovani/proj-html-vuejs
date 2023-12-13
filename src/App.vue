@@ -53,3 +53,10 @@ export default {
 <style scoped lang="scss">
 @use "./styles/partials/variables";
 </style>
+
+
+
+
+
+
+
