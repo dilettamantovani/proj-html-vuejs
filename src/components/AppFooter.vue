@@ -3,9 +3,6 @@ import { store } from "../store.js";
 
 export default {
     name: "AppFooter",
-    props: {
-        footerLinks: Array,
-    },
 
     data() {
         return {
