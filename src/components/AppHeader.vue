@@ -128,6 +128,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+header {
+    border-bottom: 0.4rem solid black
+}
+
 a #logo {
     height: 4.7rem;
     margin: 0.1rem 0 0;
