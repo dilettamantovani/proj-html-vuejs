@@ -38,21 +38,18 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader class="sticky-top bg-white w-100" />
   <AppJumbo />
   <AppMain />
   <AppReview />
   <AppArticles />
-  <AppFooter />
+  <AppFooter :footerArray="store.footerLinks" />
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss";
 </style>
 
-<style scoped lang="scss">
-@use "./styles/partials/variables";
-</style>
 
 
 
