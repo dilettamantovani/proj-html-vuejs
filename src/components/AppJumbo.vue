@@ -55,6 +55,7 @@ export default {
     </swiper>
 </template>
 
+
 <style scoped lang="scss">
 html,
 body {
