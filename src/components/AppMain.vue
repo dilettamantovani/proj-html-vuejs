@@ -16,8 +16,6 @@ export default {
 </script>
 
 
-<template>
-    <p>Banana</p>
-</template>
+<template></template>
 
 <style scoped lang="scss"></style>
