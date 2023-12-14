@@ -33,8 +33,25 @@ export default {
     <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :effect="'fade'" :centeredSlides="true"
         :autoplay="{ delay: 8000, disableOnInteraction: false }" :pagination="{ clickable: true }" :navigation="true"
         :modules="modules" class="mySwiper">
-        <swiper-slide><img src="../assets/img/slider-autocar-5.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/slider-autocar-6.jpg" alt=""></swiper-slide>
+        <swiper-slide>
+            <img src="../assets/img/slider-autocar-5.jpg" alt="">
+            <div class="slideTxt d-flex flex-column align-items-start text-white">
+                <p class="slideTitle fw-bold">Buy And Sell Your</p>
+                <p class="slideTitle fw-bold">Car At Its Value</p>
+                <p class="slideSub fw-bold">Find the right place and dealer.</p>
+                <a href="#"><button class="btn bg-black text-white btn-lg">Learn more<i
+                            class="fa fa-arrow-right ms-1"></i></button></a>
+            </div>
+        </swiper-slide>
+        <swiper-slide>
+            <img src="../assets/img/slider-autocar-6.jpg" alt="">
+            <div class="slideTxt d-flex flex-column align-items-start text-white">
+                <p class="slideTitle fw-bold">The Easiest Way To</p>
+                <p class="slideTitle fw-bold">Buy And Sell Vehicles</p>
+                <p class="slideSub fw-bold">Find the right place and dealer.</p>
+                <a href=""><button class="btn btn-dark">Learn more<i class="fa fa-arrow-right"></i></button></a>
+            </div>
+        </swiper-slide>
     </swiper>
 </template>
 
@@ -75,5 +92,24 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.slideTxt {
+    position: absolute;
+    top: 7rem;
+    left: 13rem;
+}
+
+.slideTitle {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.slideSub {
+    font-size: 1.3rem;
+}
+
+.btn-dark {
+    border-radius: none;
 }
 </style>
