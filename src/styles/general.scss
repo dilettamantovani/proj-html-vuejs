@@ -12,27 +12,14 @@
     display: none
 }
 
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-button-disabled {
-    color: white;
-    background-color: black;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    height: 1.8rem;
-    padding: 0.2rem;
+::-webkit-scrollbar {
+    width: 0.4rem;
 }
 
-.swiper-button-prev::after {
-    color: white;
-    background-color: black;
-    border-radius: 4px;
-    font-size: 0.7rem;
+::-webkit-scrollbar-track {
+    background: white;
 }
 
-.swiper-button-next::after {
-    color: white;
-    background-color: black;
-    border-radius: 4px;
-    font-size: 0.7rem;
+::-webkit-scrollbar-thumb {
+    background: black;
 }

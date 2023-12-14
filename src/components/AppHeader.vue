@@ -169,16 +169,4 @@ a #logo {
 .socialIcon:hover {
     border: solid 1px black;
 }
-
-::-webkit-scrollbar {
-    width: 0.4rem;
-}
-
-::-webkit-scrollbar-track {
-    background: white;
-}
-
-::-webkit-scrollbar-thumb {
-    background: black;
-}
 </style>

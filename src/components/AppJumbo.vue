@@ -76,6 +76,32 @@ body {
     height: 100vh;
 }
 
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-disabled {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    height: 1.8rem;
+    padding: 0.2rem;
+}
+
+.swiper-button-prev::after {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
+.swiper-button-next::after {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 0.7rem;
+}
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
