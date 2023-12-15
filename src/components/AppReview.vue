@@ -22,25 +22,25 @@ export default {
             reviewLinks: [
                 {
                     text: "A fast and reliable vehicle selling site. Rare quality website with hundreds of model vehicles.",
-                    img: "../assets/img/testimonial4-1.png",
+                    img: "testimonial4-1.png",
                     name: "Elizabeth"
                 },
 
                 {
                     text: "We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-                    img: "../assets/img/man1.png",
+                    img: "man1.png",
                     name: "Adam"
                 },
 
                 {
                     text: "One of the quality websites I apply to rent a car. There are hundreds of different tools.",
-                    img: "../assets/img/testimonial2-1.png",
+                    img: "testimonial2-1.png",
                     name: "Cristian"
                 },
 
                 {
                     text: "I was trying to sell my car. And I put it here and sold it for more than it was worth.",
-                    img: "../assets/img/man2.png",
+                    img: "man2.png",
                     name: "Robert"
                 },
             ],
@@ -49,7 +49,7 @@ export default {
 
     methods: {
         getImagePath(img) {
-            return new URL(`${img}`, import.meta.url).href
+            return new URL(`../assets/img/${img}`, import.meta.url).href
         },
     },
 
@@ -94,7 +94,7 @@ body {
 }
 
 .wrapper {
-    background-image: url(../assets/img/comment-bg-autocar.jpg);
+    background-image: url(comment-bg-autocar.jpg);
     object-fit: cover;
 }
 
